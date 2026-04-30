@@ -1,0 +1,67 @@
+.container{
+    width: 100%;
+    position: relative;
+    height: max-content;
+    /* background-color: yellow; */
+}
+
+form{
+    margin: auto;
+    margin-top: 23%;
+    width: 50%;
+    position: relative;
+    z-index: 110;
+    background-color: white;
+    padding: 25px;
+    padding-right: 45px;
+    padding-left: 25px;
+    border-radius: 10px;
+    height: max-content;
+}
+
+.food1{
+    z-index: 100;
+    position: absolute;
+    right: 17%;
+    top: 2%;
+    height: 380px;
+    width: 380px;
+}
+
+.chefIcon{
+    height: 360px;
+    width: 260px;
+    position: absolute;
+    right: 20%;
+    top: -80%;
+}
+
+.resetPassLink,.registerLink{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+    color: gray;
+}
+.resetPassLink{
+    margin-top: -3px;
+}
+.registerLink:hover,.resetPassLink:hover{
+    cursor: pointer;
+}
+.title{
+    position: absolute;
+    top: -46%;
+    left: 28%;
+    font-size: 45px;
+    color: #484d52;
+}
+
+form button{
+    background-color: #484d52;
+    border-color: #484d52;
+}
+
+.alert-danger{
+    margin: auto;
+    width: 96%;
+}

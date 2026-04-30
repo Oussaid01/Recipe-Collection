@@ -1,0 +1,10 @@
+form button.btn-primary{
+    background-color: #484d52 !important;
+    border-color: #484d52 !important;
+}
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+}
+body{
+    overflow: hidden;
+}

@@ -1,0 +1,49 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.navBar{
+    background-color: #fefeff;
+    padding: 1rem;
+    display: flex;
+}
+
+
+.navBar-title{
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+
+}
+
+.navBar a.btn{
+    margin-left: 15rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.navBar a.btn.myprofile{
+    background-color: #cce14f;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.recipies{
+    display: inline-block;
+    background-color: #fcde8e;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    padding-right: 2rem;
+}
+
+a svg{
+    vertical-align: middle;
+    margin-left: 0.25rem;
+}   
+
+.recipies svg{
+    margin-left: 0.45rem;
+}
+
+.recipies:active,.recipies:hover{
+    background-color: #fcde8e;
+}
