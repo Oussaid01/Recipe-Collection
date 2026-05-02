@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/navBar.css">
     <link rel="stylesheet" href="styles/recipe.css">
+    <link rel="stylesheet" href="styles/style.css">
     <script src="scripts/recipe.js"></script>
 </head>
 
@@ -19,7 +20,14 @@ $res = mysqli_query($con,"select * from recipies where isPublic = 1");
 ?>
 
 
-<body>>
+<body>
+
+    <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterRecipes(this, 'all')">All</button>
+        <button class="filter-btn" onclick="filterRecipes(this, 'easy')">Easy</button>
+        <button class="filter-btn" onclick="filterRecipes(this, 'medium')">Medium</button>
+        <button class="filter-btn" onclick="filterRecipes(this, 'hard')">Hard</button>
+    </div>
 
     <div class="recipies-container">
 
@@ -30,7 +38,7 @@ $res = mysqli_query($con,"select * from recipies where isPublic = 1");
     while ($tab=mysqli_fetch_array($res)){
         echo '
 
-        <div class="flip-card"  
+        <div class="flip-card" data-difficulty="'.strtolower($tab[2]).'"
         onclick="toggleFlip(this)">
         <div class="flip-card-inner">
         
@@ -91,8 +99,21 @@ $res = mysqli_query($con,"select * from recipies where isPublic = 1");
     }
     ?>
 
-    <!-- container -->
     </div> 
+
+    <script>
+        function filterRecipes(btn, difficulty) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('.flip-card').forEach(card => {
+                if (difficulty === 'all' || card.dataset.difficulty === difficulty) {
+                    card.style.display = 'inline-block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 
 </body>
 </html>

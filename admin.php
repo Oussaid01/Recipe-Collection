@@ -76,7 +76,7 @@ $res = mysqli_query($con,"select * from recipies where isPublic = 1");
             <button class="btn-close" onclick="closeModal()"></button>
         </div>
         
-        <form action="updateUser.php" method="post" onsubmit="return updateUser()">
+        <form action="" method="post" onsubmit="return updateUser()">
         <div class="modal-body">
             <input
             class="form-control"

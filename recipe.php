@@ -52,7 +52,7 @@ else{
 
   <section class="prep-section">
     <h2>Preparation Steps :</h2>
-    <div class="steps-list">
+    <div class="steps-list" style="overflow: auto !important;height: 200px !important;">
   ';
   for ($i = 0; $i < count($arr); $i++) {
     echo '
